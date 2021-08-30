@@ -1,0 +1,155 @@
+@import url(https://fonts.google.com/specimen/Lexend+Deca);
+
+/*
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+### Font
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+*/
+* {
+    display: border-box;
+    margin: 0;
+    padding: 0;
+}
+ body {
+     font-family: 'Lexend Deca', sans-serif;
+     font-size: 15px;
+     background-size: 100%;
+     background-color: hsl(233, 47%, 7%);
+     display: flex;
+     height: 100vh;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    background-repeat: no-repeat;
+    min-width: 320px;
+
+ }
+ .card {
+     background-color: hsl(244, 38%, 16%);
+     width: 80%;
+     margin: 40px;
+     border-radius: 10px;
+     max-width: 1110px;
+ }
+ .card-inner {
+     display: flex;
+ }
+.card-description {
+    max-width: 40%;
+   padding: 70px 50px 50px 72px;
+}
+ .header-text{
+    margin-bottom: 28px;
+   font-size: 36px;
+   color: hsl(0, 0%, 100%);
+ }
+ .header-text > span {
+    color: hsl(277, 64%, 61%);
+ }
+
+ .main-text {
+    padding: 0 0px 0 0;
+   margin-bottom: 74px;
+   line-height: 1.6;
+   color: hsla(0, 0%, 100%, 0.75);
+   font-size: 15px;
+ }
+ .statistics__text {
+   font-family: 'Lexend Deca', sans-serif;
+   font-size: 12px;
+   letter-spacing: .9px;
+   text-transform: uppercase;
+   color: hsla(0, 0%, 100%, 0.6);
+ }
+ .statistics {
+    display: flex;
+ }
+ .statistics__title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: hsl(0, 0%, 100%);
+ }
+ .statistics__companies,
+ .statistics__templates {
+    margin-right: 64px;
+ }
+
+ .statistics__companies,
+.statistics__templates,
+.statistics__queries {
+   list-style: none;
+}
+ .image {
+    width: 60%;
+    filter: brightness(0.40) sepia(1) saturate(1000%) hue-rotate(255deg) opacity(0.80);
+    border-radius: 0 7px 7px 0;
+    position: relative;
+ }
+ .image > img {
+    display: block;
+    width: 100%;
+    border-radius: 0 7px 7px 0;
+    opacity: .7;
+ }
+
+ @media (max-width: 1160px) {
+    .card-inner {
+       flex-direction: column-reverse;
+    }
+ 
+    .card-description {
+       max-width: 100%;
+       padding: 20px;
+       text-align: center;
+    }
+ 
+    .main-text {
+       padding: 0;
+   }
+ 
+    .image {
+       width: 100%;
+       border-radius: 7px 7px 0 0;
+    }
+ 
+    .image img {
+       border-radius: 7px 7px 0 0;
+    }
+ 
+    .statistics {
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+    }
+ 
+    .statistics__companies,
+    .statistics__templates {
+       margin-right: 0px;
+       margin-bottom: 30px;
+    }
+ }
